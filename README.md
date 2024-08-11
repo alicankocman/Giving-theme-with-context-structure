@@ -1,8 +1,32 @@
-# React + Vite
+# React Tema Yönetimi ile `ThemeContextProvider`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu belgede, React uygulamanızda temayı yönetmek için kullanılan `ThemeContextProvider` bileşenini açıklayacağız. Tema yönetimi, kullanıcı arayüzünüzün görünümünü dinamik olarak değiştirmek için kullanılır.
 
-Currently, two official plugins are available:
+## 1. `ThemeContext` Oluşturma
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tema bilgilerini paylaşmak için `ThemeContext` oluşturulur:
+
+## 2.'ThemeContextProvider' Bileşeni
+
+'ThemeContextProvider', temayı yönetir ve tüm alt bileşenlere sağlar:
+Tema Yönetimi: themeName ve handleTheme fonksiyonları ile temayı değiştirir ve tarayıcıda saklarız.
+İlk Yükleme: useEffect, bileşen yüklendiğinde mevcut temayı kontrol eder ve uygulamada uygular.
+
+## 3.Kullanım
+
+ThemeContextProvider bileşenini uygulamanızın en üst seviyesinde sarmalayarak tema bilgilerini tüm alt bileşenlere sağlar:
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import { ThemeContextProvider } from './context/ContextTheme';
+
+ReactDOM.render(
+    <ThemeContextProvider>
+        <App />
+    </ThemeContextProvider>,
+    document.getElementById('root')
+);
+
+## 4. Sonuç
+   Bu yöntem, kullanıcıların uygulama temasını kolayca yönetmelerine ve tercihlerinin tarayıcıda saklanmasına olanak tanır. Böylece kullanıcı deneyimi daha kişiselleştirilmiş hale gelir.
