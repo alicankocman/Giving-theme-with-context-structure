@@ -12,4 +12,9 @@ export default defineConfig({
       external: ['react-router-dom'],
     },
   },
+   resolve: {
+    alias: {
+      'react-router-dom': require.resolve('react-router-dom'),
+    },
+  },
 })
