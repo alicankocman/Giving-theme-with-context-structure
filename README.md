@@ -30,3 +30,9 @@ ReactDOM.render(
 
 ## 4. Sonuç
    Bu yöntem, kullanıcıların uygulama temasını kolayca yönetmelerine ve tercihlerinin tarayıcıda saklanmasına olanak tanır. Böylece kullanıcı deneyimi daha kişiselleştirilmiş hale gelir.
+
+   ## Context - Proje Videosu
+
+https://github.com/user-attachments/assets/b522a42f-6491-4881-8d16-88834f5982de
+
+
